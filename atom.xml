@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gohna/gohna.github.io.git/"/>
-  <updated>2018-11-07T06:44:06.033Z</updated>
+  <updated>2018-11-09T09:03:50.339Z</updated>
   <id>http://gohna/gohna.github.io.git/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>编译Linux内核</title>
+    <link href="http://gohna/gohna.github.io.git/2018/11/09/%E7%BC%96%E8%AF%91Linux%E5%86%85%E6%A0%B8/"/>
+    <id>http://gohna/gohna.github.io.git/2018/11/09/编译Linux内核/</id>
+    <published>2018-11-09T07:37:15.000Z</published>
+    <updated>2018-11-09T09:03:50.339Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a><font face="微软雅黑">前言</font></h1><p>· 本文主要介绍编译Linux内核实验的相关知识点和基本操作教程</p><h2 id="·-本文使用的虚拟机是VMware-WorkStation，使用的操作系统是CentOS-7-X86-64，重新编译的内核是，以上均可在官网上下载获得。也可使用其他版本完成此实验，若使用其他版本，可能会出现一些小的问题不能完全贴合此教程。欢迎大家参照其他教程完成实验或者发邮件给我一起讨论解决。"><a href="#·-本文使用的虚拟机是VMware-WorkStation，使用的操作系统是CentOS-7-X86-64，重新编译的内核是，以上均可在官网上下载获得。也可使用其他版本完成此实验，若使用其他版本，可能会出现一些小的问题不能完全贴合此教程。欢迎大家参照其他教程完成实验或者发邮件给我一起讨论解决。" class="headerlink" title="· 本文使用的虚拟机是VMware WorkStation，使用的操作系统是CentOS-7-X86_64，重新编译的内核是，以上均可在官网上下载获得。也可使用其他版本完成此实验，若使用其他版本，可能会出现一些小的问题不能完全贴合此教程。欢迎大家参照其他教程完成实验或者发邮件给我一起讨论解决。"></a>· 本文使用的虚拟机是VMware WorkStation，使用的操作系统是CentOS-7-X86_64，重新编译的内核是，以上均可在官网上下载获得。也可使用其他版本完成此实验，若使用其他版本，可能会出现一些小的问题不能完全贴合此教程。欢迎大家参照其他教程完成实验或者发邮件给我一起讨论解决。</h2><h2 id="本文框架"><a href="#本文框架" class="headerlink" title="本文框架"></a><font face="微软雅黑">本文框架</font></h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="编译Linux内核/编译Linux内核.png" alt="Mindmap-本文框架"></h2><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;&lt;font face=&quot;微软雅黑&quot;&gt;前言&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;· 本文主要介绍编译Linux内核实验的相关知识点和基本操作教程&lt;/p&gt;
+&lt;h2 id=&quot;
+      
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://gohna/gohna.github.io.git/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Linux" scheme="http://gohna/gohna.github.io.git/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
