@@ -157,7 +157,7 @@
 <meta property="og:image" content="http://gohna/gohna.github.io.git/2018/11/09/编译Linux内核/09.PNG">
 <meta property="og:image" content="http://gohna/gohna.github.io.git/2018/11/09/编译Linux内核/010.PNG">
 <meta property="og:image" content="http://gohna/gohna.github.io.git/2018/11/09/编译Linux内核/011.PNG">
-<meta property="og:updated_time" content="2018-11-09T14:01:24.784Z">
+<meta property="og:updated_time" content="2018-11-09T14:07:01.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编译Linux内核">
 <meta name="twitter:description" content="前言 本文主要介绍编译Linux内核实验的相关知识点和基本操作教程   本文使用的虚拟机是VMware WorkStation，使用的操作系统是CentOS-7-X86_64，重新编译的内核是，以上均可在官网上下载获得。也可使用其他版本完成此实验，若使用其他版本，可能会出现一些小的问题不能完全贴合此教程。欢迎大家参照其他教程完成实验或者发邮件给我一起讨论解决。  本文框架 理论解释 Linux操作">
@@ -487,36 +487,36 @@
 </li>
 <li>Linux下的启动管理器有LILO/GRUB/yaboot，由于配置文件错误造成Linux启动失败时可以用grub程序的相关命令手动启动Linux。（编译结束重启时可能会用到）  </li>
 </ul>
-<h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a><font face="微软雅黑">操作流程</font></h2><p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/B2.png" alt="Mindmap-操作流程">    </p>
+<h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a><font face="微软雅黑">操作流程</font></h2><p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/B2.png" alt="">    </p>
 <ul>
 <li>用到的工具有VMware Workstation，CentOS-7-X86-64的镜像，教程从在VM中创建一个新的虚拟机开始，其他用到的包的具体下载和安装会在后续给出。  </li>
 <li>创建虚拟机  <ol>
-<li>打开VMware Workstation，选择创建一个新的虚拟机。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/C1.PNG" alt="Mindmap-操作流程">  </li>
-<li>选择典型，下一步。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/2.PNG" alt="Mindmap-操作流程"> </li>
-<li>选择安装程序光盘映像文件，这里会自动检测，如果没有点击后面的浏览手动选择到你下载好的CentOS-7-X86_64镜像，下一步。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/3.PNG" alt="Mindmap-操作流程">  </li>
-<li>设置全名、用户名、密码，下一步。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/4.PNG" alt="Mindmap-操作流程">   </li>
-<li>设置虚拟机的名称和位置，（我们知道虚拟机其实是以一个文件夹形式存储的，这里推荐在D盘新建一个文件夹来存虚拟机，我自己是在D盘下建立一个Virtual Machines文件夹，在里面再分别建立子文件夹存放各个虚拟机），下一步。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/5.PNG" alt="Mindmap-操作流程">    </li>
-<li>将最大磁盘大小调至30GB(之前用20GB编译结果硬盘空间不够，平时自己用的虚拟机设置20GB足矣)，选择存储为单个文件，下一步。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/6.PNG" alt="Mindmap-操作流程">    </li>
-<li>点击完成。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/7.PNG" alt="Mindmap-操作流程"><br>至此，一个CentOS7的虚拟机就创建好了,等待安装。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/8.PNG" alt="Mindmap-操作流程"><br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/9.PNG" alt="Mindmap-操作流程"><br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/10.PNG" alt="Mindmap-操作流程"><br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/11.PNG" alt="Mindmap-操作流程"><br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/12.PNG" alt="Mindmap-操作流程">    </li>
+<li>打开VMware Workstation，选择创建一个新的虚拟机。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/C1.PNG" alt="">  </li>
+<li>选择典型，下一步。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/2.PNG" alt=""> </li>
+<li>选择安装程序光盘映像文件，这里会自动检测，如果没有点击后面的浏览手动选择到你下载好的CentOS-7-X86_64镜像，下一步。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/3.PNG" alt="">  </li>
+<li>设置全名、用户名、密码，下一步。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/4.PNG" alt="">   </li>
+<li>设置虚拟机的名称和位置，（我们知道虚拟机其实是以一个文件夹形式存储的，这里推荐在D盘新建一个文件夹来存虚拟机，我自己是在D盘下建立一个Virtual Machines文件夹，在里面再分别建立子文件夹存放各个虚拟机），下一步。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/5.PNG" alt="">    </li>
+<li>将最大磁盘大小调至30GB(之前用20GB编译结果硬盘空间不够，平时自己用的虚拟机设置20GB足矣)，选择存储为单个文件，下一步。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/6.PNG" alt="">    </li>
+<li>点击完成。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/7.PNG" alt=""><br>至此，一个CentOS7的虚拟机就创建好了,等待安装。<br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/8.PNG" alt=""><br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/9.PNG" alt=""><br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/10.PNG" alt=""><br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/11.PNG" alt=""><br><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/12.PNG" alt="">    </li>
 </ol>
 </li>
 <li><p>查看当前虚拟机的内核信息  </p>
 <blockquote>
 <p><code>uname-a</code><br><code>ls -l /boot</code>  </p>
 </blockquote>
-<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/01.PNG" alt="Mindmap-操作流程">   </p>
+<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/01.PNG" alt="">   </p>
 </li>
 <li><p>安装编译工具</p>
 <blockquote>
 <p><code>yum -y install gcc gcc-c++ ncurses ncurses-devel cmake elfutils-libelf-devel openssl-devel</code></p>
 </blockquote>
-<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/02.PNG" alt="Mindmap-操作流程">  </p>
+<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/02.PNG" alt="">  </p>
 </li>
 <li><p>下载内核源码并解压进入源码安装包 推荐下载地址<a href="https://www.kernel.org/" target="_blank" rel="noopener">https://www.kernel.org/</a>    </p>
 <blockquote>
 <p><code>cd /usr/src &amp;&amp; wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.12.3.tar.xz &amp;&amp; tar -xvf linux-4.12.3.tar.xz &amp;&amp; cd linux-4.12.3</code></p>
 </blockquote>
-<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/03.PNG" alt="Mindmap-操作流程">    </p>
+<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/03.PNG" alt="">    </p>
 </li>
 <li><p>清理内核源码目录(初次编译不需要此步)</p>
 <blockquote>
@@ -529,7 +529,7 @@
 </blockquote>
 </li>
 </ul>
-<p>  <img src="/gohna.github.io.git/2018/11/09/编译Linux内核/04.PNG" alt="Mindmap-操作流程"><br>  <img src="/gohna.github.io.git/2018/11/09/编译Linux内核/05.PNG" alt="Mindmap-操作流程">  </p>
+<p>  <img src="/gohna.github.io.git/2018/11/09/编译Linux内核/04.PNG" alt=""><br>  <img src="/gohna.github.io.git/2018/11/09/编译Linux内核/05.PNG" alt="">  </p>
 <ul>
 <li><p>执行make编译这一步会非常久，至少两个小时， </p>
 <blockquote>
@@ -540,32 +540,32 @@
 <blockquote>
 <p><code>make -4j</code></p>
 </blockquote>
-<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/06.PNG" alt="Mindmap-操作流程">  </p>
+<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/06.PNG" alt="">  </p>
 </li>
 <li><p>安装模块(安装完毕后可以到/lib/modules目录下查看)  </p>
 <blockquote>
 <p><code>make modules_install</code></p>
 </blockquote>
-<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/08.PNG" alt="Mindmap-操作流程">  </p>
+<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/08.PNG" alt="">  </p>
 </li>
 <li><p>执行make install 安装内核  </p>
 <blockquote>
 <p><code>make install</code></p>
 </blockquote>
-<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/09.PNG" alt="Mindmap-操作流程"><br>至此内核已经编译成功。  </p>
+<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/09.PNG" alt=""><br>至此内核已经编译成功。  </p>
 </li>
 <li>安装完成后修改默认内核启动项（可选，如果不进行引导，重启时手动选择内核进入）  <blockquote>
 <p><code>cat /boot/grub2/grub.cfg | grep menuentry</code> //查看系统可用内核<br><code>grub2-set-default ‘CentOS Linux (4.12.3) 7 (Core)’</code> //修改开机默认使用的内核</p>
 </blockquote>
 </li>
 </ul>
-<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/010.PNG" alt="Mindmap-操作流程">  </p>
+<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/010.PNG" alt="">  </p>
 <ul>
 <li><p>重启电脑后查看内核版本<br>可以看到图中红色圈起来的部分显示我定制的内核名称。    </p>
 <blockquote>
 <p><code>reboot</code><br><code>uname-a</code><br><code>ls -l /boot</code></p>
 </blockquote>
-<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/011.PNG" alt="Mindmap-操作流程"><br>至此此次实验成功结束。<br>用CentOS其他版本或者Ubantu完成此实验均是一样的操作， </p>
+<p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/011.PNG" alt=""><br>至此此次实验成功结束。<br>用CentOS其他版本或者Ubantu完成此实验均是一样的操作， </p>
 <h2 id="实验小结"><a href="#实验小结" class="headerlink" title="实验小结"></a><font face="微软雅黑">实验小结</font></h2><p>聊聊我自己在实验中遇到的坑：    </p>
 </li>
 </ul>
