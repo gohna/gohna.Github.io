@@ -135,7 +135,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://gohna/gohna.github.io.git/2018/11/09/编译Linux内核/编译Linux内核.jpg">
 <meta property="og:image" content="http://gohna/gohna.github.io.git/2018/11/09/编译Linux内核/B2.png">
-<meta property="og:updated_time" content="2018-11-09T12:14:08.884Z">
+<meta property="og:updated_time" content="2018-11-09T12:49:06.593Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编译Linux内核">
 <meta name="twitter:description" content="前言 本文主要介绍编译Linux内核实验的相关知识点和基本操作教程   本文使用的虚拟机是VMware WorkStation，使用的操作系统是CentOS-7-X86_64，重新编译的内核是，以上均可在官网上下载获得。也可使用其他版本完成此实验，若使用其他版本，可能会出现一些小的问题不能完全贴合此教程。欢迎大家参照其他教程完成实验或者发邮件给我一起讨论解决。  本文框架 理论解释 Linux操作">
@@ -441,15 +441,15 @@
 <li>本文主要介绍编译Linux内核实验的相关知识点和基本操作教程  </li>
 <li>本文使用的虚拟机是VMware WorkStation，使用的操作系统是CentOS-7-X86_64，重新编译的内核是，以上均可在官网上下载获得。也可使用其他版本完成此实验，若使用其他版本，可能会出现一些小的问题不能完全贴合此教程。欢迎大家参照其他教程完成实验或者发邮件给我一起讨论解决。</li>
 </ul>
-<h2 id="本文框架"><a href="#本文框架" class="headerlink" title="本文框架"></a><font face="微软雅黑">本文框架</font></h2><p><img src="/gohna.github.io.git/2018/11/09/编译Linux内核/编译Linux内核.jpg" alt="Mindmap-本文框架"></p>
+<h2 id="本文框架"><a href="#本文框架" class="headerlink" title="本文框架"></a><font face="微软雅黑">本文框架</font></h2><p><img src="2018/11/09/编译Linux内核/编译Linux内核.jpg" alt="Mindmap-本文框架"></p>
 <h2 id="理论解释"><a href="#理论解释" class="headerlink" title="理论解释"></a><font face="微软雅黑">理论解释</font></h2><blockquote>
 <p>Linux操作系统是一个开源的操作系统，我们可以从网上获取到Linux操作系统的内核源代码，并对这些代码进行编译，生成一个新内核的二进制文件，然后我们将生成的二进制文件跑起来，这就是我们这个实验的主要思路。  </p>
 </blockquote>
 <ul>
 <li>内核是操作系统的内部核心程序，它向外部提供了对计算机设备的核心管理调用。    </li>
 <li>内核由两个明显的接口，上层是系统调用接口，下层是面向硬件部分的接口，在这之间的就是内核部分。 后续我们拿到内核编译代码也可以看到，它的代码也是以这种结构来组织的。</li>
-<li>make是一个可以对大型程序自己决定需要编译的代码块并且自动发起命令编译工具。Linux中make为GNUmake。其他平台也有相应的make，比如集成开发环境IDE，只需在菜单上点击rebuild/recompare，就可以重新编译/重新构造二进制文件，并且它可以自己决定哪些源码改动过了需要重新编译，哪些源码没有改动过不需要重新编译。</li>
-<li>本实验涉及到的一些make操作及其含义：make mennuconfig：用命令行模式配置内核。make：编译内核和模块。make modules_install：安装模块。make install：安装内核。make mrproper：清楚之前做的一些关于内核编译的操作。</li>
+<li>make是一个可以对大型程序自己决定需要编译的代码块并且自动发起命令的编译工具。Linux中make为GNUmake。其他平台也有相应的make，比如集成开发环境IDE，只需在菜单上点击rebuild/recompare，就可以重新编译/重新构造二进制文件，并且它可以自己决定哪些源码改动过了需要重新编译，哪些源码没有改动过不需要重新编译。</li>
+<li>本实验涉及到的一些make操作及其含义：make mennuconfig：用命令行模式配置内核。make：编译内核和模块。make modules_install：安装模块。make install：安装内核。make mrproper：清除之前做的一些关于内核编译的操作。</li>
 <li>makefile是一个文件数据库，其中定义了一些如何重新编译系统的规则和方法。</li>
 <li>操作系统引导过程：<ol>
 <li>电脑开机后，开始启动BIOS，开始BIOS自检。  </li>
